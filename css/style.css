@@ -356,7 +356,12 @@ a {
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
+}
+
+button {
+  outline: none;
+  cursor: pointer;
 }
 
 .container {
@@ -376,6 +381,10 @@ img {
           align-items: center;
   background-color: #ffffff;
   padding: 40px 0;
+}
+
+.header-top__menu-button {
+  display: none;
 }
 
 .header__search {
@@ -413,7 +422,6 @@ img {
   position: absolute;
   padding: 12px 24px 12px 25px;
   right: 0;
-  outline: none;
   border: none;
   width: 65px;
   height: 40px;
@@ -504,6 +512,48 @@ img {
   .container {
     max-width: 576px;
     width: 92%;
+  }
+  .navbar {
+    display: none;
+  }
+  .header__search, .header__user {
+    display: none;
+  }
+  .header-top__menu-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .menu-button {
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 16px;
+    height: 11px;
+    border: none;
+    background-color: #fff;
+  }
+  .menu-button__line {
+    width: 16px;
+    height: 1px;
+    background-color: #333333;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo {
+    width: 99px;
   }
 }
 /*# sourceMappingURL=style.css.map */
