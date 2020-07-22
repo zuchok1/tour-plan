@@ -5,6 +5,7 @@ var mySwiper = new Swiper('.swiper-container', {
     enabled: true,
     onlyInViewport: true,
   },
+  effect: 'fade',
 
   // Navigation arrows
   navigation: {

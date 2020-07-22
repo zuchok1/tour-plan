@@ -584,8 +584,8 @@ h1, p {
 }
 
 .swiper-container {
-  width: 728px;
-  height: 450px;
+  max-width: 728px;
+  max-height: 450px;
   border-radius: 8px;
 }
 
@@ -598,6 +598,10 @@ h1, p {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 122, 223, 0.48)), to(rgba(255, 255, 255, 0.128)));
   background: linear-gradient(180deg, rgba(0, 122, 223, 0.48) 0%, rgba(255, 255, 255, 0.128) 100%);
   z-index: 9;
+}
+
+.swiper-slide {
+  margin-bottom: -3px;
 }
 
 .swiper-button {
