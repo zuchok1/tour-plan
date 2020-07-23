@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -364,6 +365,7 @@ img {
 button {
   outline: none;
   cursor: pointer;
+  border: none;
 }
 
 ul {
@@ -631,9 +633,156 @@ h1, p {
   right: 16px;
 }
 
+.hotel-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  max-height: 450px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: сenter;
+      -ms-flex-align: сenter;
+          align-items: сenter;
+}
+
+.hotel-grid__swiper {
+  margin: 0;
+}
+
+.hotel-info__options-card {
+  margin-bottom: 30px;
+}
+
+.options-card {
+  max-width: 350px;
+  min-height: 210px;
+  padding: 29px 29px 26px 26px;
+  background-color: #0A223D;
+  border-radius: 8px;
+  color: #ffffff;
+  font-family: Nunito;
+}
+
+.options-card__wrapper {
+  min-height: 155px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.options-card__info {
+  margin-top: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-width: 80px;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.options-card__number-of-guests, .options-card__number-of-rooms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.options-card__button {
+  color: inherit;
+  background-color: #ec1f46;
+  padding: 13px;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.price__number {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 33px;
+}
+
+.price__text {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: normal;
+}
+
+.price__text_small {
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.call-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  margin-top: -8px;
+}
+
+.call-center__number {
+  margin-left: 8px;
+}
+
+.call-center__text {
+  margin-right: auto;
+}
+
+.map {
+  width: 350px;
+  height: 210px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
+  }
+  .swiper-container {
+    width: 61.7%;
+    max-height: 100%;
+    height: 440px;
+  }
+  .options-card {
+    margin-bottom: 20px;
   }
 }
 
@@ -663,6 +812,28 @@ h1, p {
   }
   .header-top {
     padding: 30px 0;
+  }
+  .hotel-grid {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-height: 690px;
+  }
+  .swiper-container {
+    height: 450px;
+    width: 700px;
+    margin-bottom: 30px;
+  }
+  .options-card {
+    padding: 29px 22px 26px 23px;
+    max-width: 340px;
+  }
+  .hotel-info__options-card {
+    margin-bottom: 60px;
+  }
+  .map {
+    width: 340px;
   }
 }
 
@@ -706,6 +877,23 @@ h1, p {
     width: 16px;
     height: 1px;
     background-color: #333333;
+  }
+  .hotel-grid {
+    max-height: 600px;
+  }
+  .swiper-container {
+    height: 179px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .options-card {
+    max-width: 100%;
+  }
+  .hotel-info__options-card {
+    margin-bottom: 20px;
+  }
+  .map {
+    width: 100%;
   }
 }
 
