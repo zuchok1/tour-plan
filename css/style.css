@@ -428,9 +428,24 @@ h1, p {
   background-color: #f5fafe;
   border: none;
   font-size: 12px;
-  color: #333333;
   font-weight: 400;
   outline: none;
+}
+
+.search__input::-webkit-input-placeholder {
+  color: #333333;
+}
+
+.search__input:-ms-input-placeholder {
+  color: #333333;
+}
+
+.search__input::-ms-input-placeholder {
+  color: #333333;
+}
+
+.search__input::placeholder {
+  color: #333333;
 }
 
 .search__button {
@@ -486,6 +501,10 @@ h1, p {
   line-height: 18px;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.p {
+  height: 1000px;
 }
 
 .breadcrumb-container {
@@ -772,6 +791,136 @@ h1, p {
   overflow: hidden;
 }
 
+.parallax__container {
+  clip: rect(0, auto, auto, 0);
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+}
+
+.parallax__container .parallax {
+  /* can be put in a seperate class for better control */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* --------------------------- */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.newsletter {
+  padding: 98px 0 87px 0;
+}
+
+.newsletter::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: rgba(10, 34, 61, 0.8);
+  position: absolute;
+  z-index: -50;
+}
+
+.newsletter__wrapper {
+  max-width: 731px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  color: #ffffff;
+}
+
+.newsletter__title {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 45px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.newsletter__title-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.newsletter__title_small {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 30px;
+  margin: 0;
+}
+
+.newsletter__send {
+  width: 350px;
+  height: 55px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  padding-left: 33px;
+  padding-right: 75px;
+  background-color: #ffffff;
+}
+
+.newsletter__input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18px;
+  outline: none;
+}
+
+.newsletter__input::-webkit-input-placeholder {
+  color: #BDBDBD;
+}
+
+.newsletter__input:-ms-input-placeholder {
+  color: #BDBDBD;
+}
+
+.newsletter__input::-ms-input-placeholder {
+  color: #BDBDBD;
+}
+
+.newsletter__input::placeholder {
+  color: #BDBDBD;
+}
+
+.newsletter__button {
+  color: #ffffff;
+  position: absolute;
+  right: 0;
+  border: none;
+  min-width: 65px;
+  height: 55px;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  background-color: #ec1f46;
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
@@ -835,6 +984,12 @@ h1, p {
   .map {
     width: 340px;
   }
+  .hotel-info {
+    padding-bottom: 60px;
+  }
+  .newsletter {
+    padding: 92px 0 93px 0;
+  }
 }
 
 @media (max-width: 768px) {
@@ -878,11 +1033,8 @@ h1, p {
     height: 1px;
     background-color: #333333;
   }
-  .hotel-grid {
-    max-height: 600px;
-  }
   .swiper-container {
-    height: 179px;
+    height: 100%;
     width: 100%;
     margin-bottom: 20px;
   }
@@ -894,6 +1046,30 @@ h1, p {
   }
   .map {
     width: 100%;
+  }
+  .hotel-grid {
+    max-height: 100%;
+  }
+  .newsletter__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .newsletter__title {
+    font-size: 30px;
+    line-height: 38px;
+    margin-bottom: 37px;
+  }
+  .newsletter__title_small {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .newsletter__send {
+    width: 280px;
   }
 }
 

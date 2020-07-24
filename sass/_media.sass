@@ -61,6 +61,12 @@
   .map
     width: 340px
 
+  .hotel-info
+    padding-bottom: 60px
+
+  .newsletter
+    padding: 92px 0 93px 0
+
 
 @media (max-width: 768px)
   .container
@@ -93,12 +99,9 @@
       height: 1px
       background-color: $text-color
 
-  .hotel-grid
-    max-height: 600px
-
   .swiper
     &-container
-      height: 179px
+      height: 100%
       width: 100%
       margin-bottom: 20px
 
@@ -109,7 +112,24 @@
     margin-bottom: 20px
 
   .map
-    width: 100%          
+    width: 100%
+
+  .hotel-grid
+    max-height: 100% 
+
+  .newsletter
+    &__wrapper
+      flex-direction: column
+      align-items: flex-start
+    &__title
+      font-size: 30px
+      line-height: 38px
+      margin-bottom: 37px
+      &_small
+        font-size: 20px
+        line-height: 25px
+    &__send
+      width: 280px
 
 @media (max-width: 576px) 
   .logo
