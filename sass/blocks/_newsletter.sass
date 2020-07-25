@@ -1,5 +1,6 @@
 .newsletter
   padding: 98px 0 87px 0
+  position: relative
   &::before
     content: ''
     width: 100%
@@ -7,7 +8,7 @@
     top: 0
     background: rgba(10, 34, 61, 0.8)
     position: absolute
-    z-index: -50
+    z-index: 0
   &__wrapper
     max-width: 731px
     display: flex
@@ -21,6 +22,7 @@
     line-height: 45px
     text-transform: uppercase
     margin: 0
+    z-index: 10
     &-wrapper
       display: flex
       flex-direction: column   
@@ -29,6 +31,7 @@
       font-size: 24px
       line-height: 30px
       margin: 0
+      z-index: 10
   &__send
     width: 350px
     height: 55px
@@ -59,4 +62,3 @@
     font-size: 12px
     line-height: 15px
     background-color: $button-color  
-  

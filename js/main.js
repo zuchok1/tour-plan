@@ -34,10 +34,6 @@ function init() {
 }
 
 
-//Parallax
-new universalParallax().init();
-
-
 // Slider (reviews)
 var mySwiper = new Swiper('.reviews__swiper', {
   // Optional parameters
