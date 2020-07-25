@@ -1,5 +1,5 @@
-// Slider
-var mySwiper = new Swiper('.swiper-container', {
+// Slider (hotel)
+var mySwiper = new Swiper('.hotel-grid__swiper-container', {
   // Optional parameters
   loop: true,
   keyboard: {
@@ -10,10 +10,11 @@ var mySwiper = new Swiper('.swiper-container', {
 
   // Navigation arrows
   navigation: {
-    nextEl: '.swiper-button_next',
-    prevEl: '.swiper-button_prev',
+    nextEl: '.hotel-grid__swiper-button_next',
+    prevEl: '.hotel-grid__swiper-button_prev',
   },
 })
+
 
 // Map
 ymaps.ready(init);
@@ -32,5 +33,23 @@ function init() {
     }));
 }
 
+
 //Parallax
 new universalParallax().init();
+
+
+// Slider (reviews)
+var mySwiper = new Swiper('.reviews__swiper', {
+  // Optional parameters
+  loop: true,
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.reviews__swiper-button_next',
+    prevEl: '.reviews__swiper-button_prev',
+  },
+})

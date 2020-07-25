@@ -1,0 +1,79 @@
+.reviews
+  padding: 40px 0 70px 0
+  &__title
+    font-weight: bold
+    font-size: 36px
+    line-height: 45px
+    text-align: center
+    text-transform: uppercase
+    margin-bottom: 70px
+  &__swiper
+    max-width: 731px
+  &__swiper-container
+    max-width: 731px
+    margin: auto
+    position: relative  
+  &__slide
+    background: #FFFFFF
+    border-radius: 8px
+    margin-top: 45px
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 0 95px 30px 99px
+    &::before
+      content: ''
+      background-image: url(../img/quote-left.svg)
+      background-repeat: no-repeat
+      position: absolute
+      z-index: 200
+      width: 70px
+      height: 47px
+      top: 13px
+      left: 64px
+    &::after
+      content: ''
+      background-image: url(../img/quote-right.svg)
+      background-repeat: no-repeat
+      position: absolute
+      z-index: 200
+      width: 70px
+      height: 47px
+      top: 120px
+      right: 60px
+      
+  &__avatar
+    height: 90px
+    width: 90px
+    border-radius: 50%
+    object-fit: cover
+    margin-top: -45px
+    margin-bottom: 9px
+  &__name
+    margin-bottom: 10px
+    font-weight: bold
+    font-size: 12px
+    line-height: 15px
+    color: #EC1F46
+  &__date
+    margin-bottom: 4px
+    font-size: 10px
+    line-height: 13px
+    color: #000000
+  &__text
+    font-size: 12px
+    line-height: 160%
+    text-align: justify
+    position: 
+    z-index: 220
+  &__rating
+    line-height: 4px
+    margin-bottom: 32px
+  &__swiper-button
+    top: 133px
+    z-index: 200
+    &_prev
+      left: -171px
+    &_next
+      right: -171px    
+

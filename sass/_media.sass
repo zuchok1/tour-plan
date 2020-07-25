@@ -2,14 +2,21 @@
   .container
     max-width: 960px
 
-  .swiper
+  .hotel-grid__swiper
     &-container
       width: 61.7%
       max-height: 100%
       height: 440px
 
   .options-card
-    margin-bottom: 20px       
+    margin-bottom: 20px 
+
+  .reviews__swiper-button
+    top: 133px
+    &_prev
+      left: -101px
+    &_next
+      right: -101px        
 
 @media (max-width: 992px)
   .container
@@ -45,11 +52,10 @@
     flex-direction: row
     max-height: 690px    
 
-  .swiper
-    &-container
-      height: 450px
-      width: 700px
-      margin-bottom: 30px
+  .hotel-grid__swiper-container
+    height: 450px
+    width: 700px
+    margin-bottom: 30px
 
   .options-card
     padding: 29px 22px 26px 23px
@@ -66,6 +72,30 @@
 
   .newsletter
     padding: 92px 0 93px 0
+
+  .reviews
+    padding-bottom: 60px
+    &__title
+      font-size: 30px
+      line-height: 38px
+      margin-bottom: 50px
+    &__swiper
+      max-width: 579px
+    &__swiper-container
+      max-width: 579px
+    &__slide
+      padding: 0 60px 30px 64px
+      &::after
+        display: none
+      &::before
+        display: none
+    &__swiper-button
+      top: 163px
+      &_prev
+        left: -60px
+      &_next
+        right: -60px   
+  
 
 
 @media (max-width: 768px)
@@ -99,11 +129,10 @@
       height: 1px
       background-color: $text-color
 
-  .swiper
-    &-container
-      height: 100%
-      width: 100%
-      margin-bottom: 20px
+  .hotel-grid__swiper-container
+    height: 100%
+    width: 100%
+    margin-bottom: 20px
 
   .options-card
     max-width: 100%
@@ -130,6 +159,29 @@
         line-height: 25px
     &__send
       width: 280px
+
+  .reviews
+    padding: 40px 20px 50px 20px
+    &__title
+      font-size: 18px
+      line-height: 23px
+      margin-bottom: 42px
+    &__swiper
+      max-width: 579px
+    &__swiper-container
+      max-width: 579px
+    &__slide
+      padding: 0 29px 36px 33px
+    &__swiper-button
+      top: 30px
+      &_prev
+        left: 50%
+        transform: translateX(-50%)
+        margin-left: -90px
+      &_next
+        right: 50%
+        transform: translateX(50%)
+        margin-right: -90px       
 
 @media (max-width: 576px) 
   .logo
