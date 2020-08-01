@@ -31,7 +31,7 @@
 
   .footer
     &__legal
-      padding-left: 52px
+      padding-left: 50px
 
 
 @media (max-width: 992px)
@@ -127,8 +127,30 @@
     &__wrapper
       grid-template: 1fr 1fr 1fr / 1fr 1fr
   
-    
-
+  .footer
+    padding-top: 73px
+    padding-bottom: 33px
+    &__logo
+      grid-row: 1 / 2
+      width: 96px
+      padding-top: 0
+    &__wrapper
+      grid-template-columns: repeat(3 , 1fr)
+      grid-row-gap: 50px 
+    &__social
+      grid-row: 1 / 2
+      align-items: center
+      margin-left: -35px
+    &__categories
+      grid-row: 2 / 3
+    &__additional
+      margin-left: -20px  
+    &__legal
+      padding-left: 40px
+    &__contact, &__form-wrapper
+      padding-top: 10px
+      grid-column: 1 / -1
+      max-width: 539px
 
 @media (max-width: 768px)
   .container
@@ -248,8 +270,16 @@
       margin-bottom: 22px
     &__info
       margin-bottom: 22px
-        
 
+  .footer
+    &__wrapper
+      column-gap: 12px
+    &__input
+      flex-basis: 100%
+    &__legal
+      padding-left: 0
+    &__additional, &__social
+      margin-left: 0          
 
 @media (max-width: 576px) 
   .logo
@@ -270,6 +300,41 @@
 
   .rating
     display: none
+
+  .footer
+    padding-top: 69px
+    padding-bottom: 33px
+    &__wrapper
+      grid-template-columns: 1fr
+      grid-row-gap: 30px
+    &__social
+      grid-column-start: 1 / -1 
+      grid-row: 2 / 3
+      flex-wrap: wrap
+    &__title_inline
+      flex-basis: 100%
+      margin-bottom: 16px
+    &__legal
+      grid-row: 3 / 4
+    &__additional
+      grid-row: 4 / 5
+    &__categories
+      grid-row: 5 / 6
+    &__icon
+      min-width: 30px
+    &__info
+      flex-basis: 100%
+      margin-bottom: 22px
+    &__button
+      order: 1
+    &__form-wrapper, &__contact
+      padding: 0
+
+  .bottom
+    &__links-wrapper
+      flex-basis: 100%
+    &__payment-methods
+      margin-top: 10px
 
   
   
