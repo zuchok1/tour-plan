@@ -237,16 +237,6 @@
         transform: translateX(50%)
         margin-right: -90px
 
-  .activities
-    padding-top: 40px
-    &__title
-      font-size: 18px
-      line-height: 23px
-      margin-bottom: 36px
-    &__card
-      margin: auto
-      &:not(:last-child)
-        margin-bottom: 20px
   .other 
     &__wrapper
       grid-template: 1fr 1fr 1fr 1fr 1fr / 100%
@@ -271,11 +261,13 @@
     &__info
       margin-bottom: 22px
 
+  .activities
+    &__card
+      width: 48.5%
+
   .footer
     &__wrapper
       column-gap: 12px
-    &__input
-      flex-basis: 100%
     &__legal
       padding-left: 0
     &__additional, &__social
@@ -300,6 +292,19 @@
 
   .rating
     display: none
+
+  .activities
+    padding-top: 40px
+    &__card
+      margin: auto
+      width: 339px
+      &:not(:last-child)
+        margin-bottom: 20px
+
+  .section-title_small
+    font-size: 18px
+    line-height: 23px
+    margin-bottom: 36px
 
   .footer
     padding-top: 69px
@@ -329,6 +334,8 @@
       order: 1
     &__form-wrapper, &__contact
       padding: 0
+    &__input
+      flex-basis: 100%  
 
   .bottom
     &__links-wrapper
