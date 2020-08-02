@@ -157,13 +157,15 @@
     max-width: 576px
     width: 92%
 
-  .navbar
-    display: none
-  
-  .header
-    &__search, &__user
-      display: none
 
+  .header
+    &_mobile_fixed
+      position: fixed
+      top: 0
+      left: 0
+      right: 0
+      z-index: 300
+  
   .header-top
     &__menu-button  
       display: flex
@@ -182,6 +184,45 @@
       width: 16px
       height: 1px
       background-color: $text-color
+
+  .navbar
+    display: none
+    &__list
+      flex-direction: column
+    &__item:not(:last-child)
+      margin-bottom: 20px  
+    &_visible
+      display: block
+      position: fixed
+      left: 0
+      right: 0
+      bottom: 0
+      top: 78px
+    &__item_mobile_visible
+      display: list-item
+
+  body
+    padding-top: 78px
+
+  .header
+    &__search
+      display: none
+      &_mobile_visible
+        display: block
+        width: 245px
+        margin-bottom: 39px
+    &__user
+      display: none
+      &_mobile_visible
+        display: flex
+        flex-direction: column
+        margin-bottom: 27px
+        text-transform: none
+        color: #FFFFFF
+        & span
+          margin-left: 0
+          margin-top: 10px
+
 
   .hotel-grid__swiper-container
     height: 100%

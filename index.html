@@ -15,7 +15,7 @@
 </head>
 
 <body>
-  <header class="header">
+  <header class="header header_mobile_fixed">
     <div class="container">
       <div class="header-top">
         <a href="#" class="logo">
@@ -44,6 +44,20 @@
     </div>
     <nav class="navbar">
       <ul class="navbar__list container">
+        <li class="navbar__item_mobile_visible">
+          <a href="#" class="user header__user_mobile_visible">
+            <img src="img/user-avatar.jpg" alt="User: Nathan" class="user__avatar">
+            <span class="user__name">Nathan</span>
+          </a>
+        </li>
+        <li class="navbar__item_mobile_visible">
+          <form action="#" class="search header__search_mobile_visible">
+            <input type="text" class="search__input" placeholder="Search Location">
+            <button class="search__button">
+              <img src="img/search.svg" alt="Search">
+            </button>
+          </form>
+        </li>
         <li class="navbar__item"><a href="#">All Deals</a></li>
         <li class="navbar__item"><a href="#">Hotels</a></li>
         <li class="navbar__item"><a href="#">Activities</a></li>

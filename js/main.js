@@ -1,3 +1,12 @@
+// Mobile-navbar
+const menuButton = document.querySelector('.menu-button');
+menuButton.addEventListener('click', function () {
+  document
+    .querySelector('.navbar')
+    .classList.toggle('navbar_visible');
+});
+
+
 // Slider (hotel)
 var mySwiper = new Swiper('.hotel-grid__swiper-container', {
   // Optional parameters

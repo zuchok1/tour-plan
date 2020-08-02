@@ -498,6 +498,9 @@ h1, h2, h3, p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -506,6 +509,10 @@ h1, h2, h3, p {
   line-height: 18px;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.navbar__item_mobile_visible {
+  display: none;
 }
 
 .breadcrumb-container {
@@ -1670,11 +1677,12 @@ h1, h2, h3, p {
     max-width: 576px;
     width: 92%;
   }
-  .navbar {
-    display: none;
-  }
-  .header__search, .header__user {
-    display: none;
+  .header_mobile_fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 300;
   }
   .header-top__menu-button {
     display: -webkit-box;
@@ -1705,6 +1713,59 @@ h1, h2, h3, p {
     width: 16px;
     height: 1px;
     background-color: #333333;
+  }
+  .navbar {
+    display: none;
+  }
+  .navbar__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navbar__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .navbar_visible {
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 78px;
+  }
+  .navbar__item_mobile_visible {
+    display: list-item;
+  }
+  body {
+    padding-top: 78px;
+  }
+  .header__search {
+    display: none;
+  }
+  .header__search_mobile_visible {
+    display: block;
+    width: 245px;
+    margin-bottom: 39px;
+  }
+  .header__user {
+    display: none;
+  }
+  .header__user_mobile_visible {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 27px;
+    text-transform: none;
+    color: #FFFFFF;
+  }
+  .header__user_mobile_visible span {
+    margin-left: 0;
+    margin-top: 10px;
   }
   .hotel-grid__swiper-container {
     height: 100%;
