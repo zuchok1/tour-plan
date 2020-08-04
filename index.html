@@ -146,12 +146,15 @@
             <img src="img/phone-call.svg" alt="Icon: phone">
             <a class="call-center__number" href="tel:12100">12100</a>
           </div>
-          <button class="options-card__button">
+          <button class="options-card__button" id="modalBookingOpen">
             View Other Options
           </button>
         </div>
       </div>
-      <div class="map" id="map"></div>
+      <div class="map">
+        <img src="img/map-preloader.png" class="map__preloader" alt="Google Maps">
+
+      </div>
     </div>
   </section>
 
@@ -545,11 +548,29 @@
           class="bottom__payment-methods">
       </div>
     </div>
-
   </footer>
 
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=67c40d28-4de9-4486-bb52-25d0eb83cbec&lang=en_US">
-  </script>
+  <div class="modal" id="modalBooking">
+    <div class="modal__overlay"></div>
+    <div class="modal__dialog">
+      <a href="#" class="modal__close" id="modalBookingClose">
+        <img src="img/close.svg" alt="Icon: close">
+      </a>
+      <h3 class="modal__title">Booking</h3>
+      <form action="send.php" method="POST" class="modal__form">
+        <input name="name" type="text" class="input modal__input" placeholder="Your Full Name*">
+        <input name="phone" type="text" class="input modal__input" placeholder="Phone Number*">
+        <input name="email" type="text" class="input modal__input" placeholder="Email*">
+        <textarea name="message" rows="7" class="modal__textarea" placeholder="Message"></textarea>
+        <div class="modal__wrapper">
+          <button class="button modal__button">Send</button>
+          <span class="modal__info">* Required Fields</span>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
   <script src="js/swiper-bundle.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="js/parallax.min.js"></script>

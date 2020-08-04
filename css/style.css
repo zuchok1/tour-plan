@@ -800,6 +800,11 @@ h1, h2, h3, p {
   overflow: hidden;
 }
 
+.map__preloader {
+  width: 100%;
+  height: 100%;
+}
+
 .newsletter {
   padding: 98px 0 87px 0;
   position: relative;
@@ -1487,6 +1492,106 @@ h1, h2, h3, p {
   height: 22px;
 }
 
+.modal {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 143, 223, 0.39);
+  z-index: 300;
+}
+
+.modal__dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 301;
+  padding: 33px 88px;
+  background-color: #0A223D;
+  border-radius: 8px;
+  max-width: 478px;
+}
+
+.modal__close {
+  position: absolute;
+  top: 17px;
+  right: 18px;
+}
+
+.modal__title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.modal__form {
+  min-width: 301px;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.modal__input, .modal__textarea {
+  color: #bdbdbd;
+  background-color: #ffffff;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  padding: 18px 23px;
+  width: 100%;
+}
+
+.modal__input {
+  margin-bottom: 15px;
+}
+
+.modal__textarea {
+  resize: none;
+  margin-bottom: 15px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.modal__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal__button {
+  min-width: 160px;
+  min-height: 50px;
+  padding: 18px 5px;
+  color: #ffffff;
+  font-weight: bold;
+  background-color: #ec1f46;
+  border-radius: 4px;
+}
+
+.modal__info {
+  display: block;
+  color: #e0e0e0;
+  white-space: nowrap;
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
@@ -1989,6 +2094,16 @@ h1, h2, h3, p {
   }
   .bottom__payment-methods {
     margin-top: 10px;
+  }
+  .modal__dialog {
+    width: 92%;
+    padding: 33px 0;
+  }
+  .modal__form {
+    width: 92%;
+    min-width: 0;
+    max-width: 301px;
+    margin: auto;
   }
 }
 /*# sourceMappingURL=style.css.map */

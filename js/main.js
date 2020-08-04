@@ -15,7 +15,6 @@ var mySwiper = new Swiper('.hotel-grid__swiper-container', {
     enabled: true,
     onlyInViewport: true,
   },
-  effect: 'fade',
 
   // Navigation arrows
   navigation: {
@@ -24,24 +23,30 @@ var mySwiper = new Swiper('.hotel-grid__swiper-container', {
   },
 })
 
+// Modal
+const modalBooking = document.querySelector('#modalBooking');
+
+document.querySelector('#modalBookingOpen').addEventListener('click', () => {
+  modalBooking.style.visibility = 'visible';
+  modalBooking.style.opacity = '1';
+});
+
+function modalClose() {
+  modalBooking.style.visibility = 'hidden';
+  modalBooking.style.opacity = '0';
+};
+
+document.querySelector('#modalBookingClose').addEventListener('click', () => {
+  modalClose()
+});
+
+addEventListener('keydown', e => e.key === 'Escape' && modalClose());
 
 // Map
-ymaps.ready(init);
 
-function init() {
-  var myMap = new ymaps.Map("map", {
-    center: [7.9085, 98.3068],
-    zoom: 12
-  }, {
-    searchControlProvider: 'yandex#search'
-  });
-
-  myMap.geoObjects
-    .add(new ymaps.Placemark([7.9085, 98.3068], {
-      balloonContent: 'Grand Hilton Hotel'
-    }));
-}
-
+document.querySelector('.map__preloader').addEventListener('mouseenter', () => {
+  document.querySelector('.map').innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31608.153640525412!2d98.27942255114789!3d7.996953176476688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x305039f77c82826f%3A0xacc83aa6f90754f6!2sHilton%20Garden%20Inn%20Phuket%20Bang%20Tao!5e0!3m2!1sru!2sru!4v1596567498649!5m2!1sru!2sru" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>';
+});
 
 // Slider (reviews)
 var mySwiper = new Swiper('.reviews__swiper', {
