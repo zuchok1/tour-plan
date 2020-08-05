@@ -34,12 +34,12 @@ try {
     $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
 
     // Настройки вашей почты
-    $mail->SMTPAutoTLS = false;
-    $mail->SMTPSecure = false;
+    
     $mail->Host       = 'mail.zuchok.ru'; // SMTP сервера вашей почты
     $mail->Username   = 'tour-plan@zuchok.ru'; // Логин на почте
     $mail->Password   = 'J6u8X5u1'; // Пароль на почте
-    $mail->Port       = 25;
+    $mail->SMTPSecure = 'ssl';
+    $mail->Port       = 465;
     $mail->setFrom('tour-plan@zuchok.ru', 'Tour Plan'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
@@ -47,10 +47,12 @@ try {
 
 // Отправка сообщения
 $mail->isHTML(true);
+
 if (empty ($userEmail)) {
-$mail->Subject = $title;
-$mail->Body = $body;    
-} else {
+    $mail->Subject = $title;
+    $mail->Body = $body;    
+} 
+else {
     $mail->Subject = $title;
     $mail->Body = $bodyEmail;    
 };
@@ -66,3 +68,4 @@ else {$result = "error";}
 
 // Отображение результата
 header('Location: thanks.html');
+

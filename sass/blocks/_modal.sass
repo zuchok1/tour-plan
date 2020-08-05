@@ -15,11 +15,12 @@
     left: 50%
     transform: translate(-50%, -50%)
     z-index: 301
-    padding: 33px 88px
+    padding: 33px 88px 0 88px 
     background-color: #0A223D
     border-radius: 8px 
     max-width: 478px
     max-height: 95vh
+    max-height: calc(var(--vh, 1vh) * 95)
     overflow-y: scroll
     -ms-overflow-style: none
     scrollbar-width: none
@@ -59,6 +60,7 @@
     display: flex
     justify-content: space-between
     align-items: center
+    margin-bottom: 33px
   &__button
     min-width: 160px
     min-height: 50px

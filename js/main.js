@@ -8,7 +8,7 @@ menuButton.addEventListener('click', function () {
 
 
 // Slider (hotel)
-var mySwiper = new Swiper('.hotel-grid__swiper-container', {
+const mySwiper = new Swiper('.hotel-grid__swiper-container', {
   // Optional parameters
   loop: true,
   keyboard: {
@@ -36,8 +36,9 @@ function modalClose() {
   modalBooking.style.opacity = '0';
 };
 
-document.querySelector('#modalBookingClose').addEventListener('click', () => {
-  modalClose()
+document.querySelector('#modalBookingClose').addEventListener('click', (e) => {
+  e.preventDefault();
+  modalClose();
 });
 
 addEventListener('keydown', e => e.key === 'Escape' && modalClose());
@@ -49,7 +50,7 @@ document.querySelector('.map__preloader').addEventListener('mouseenter', () => {
 });
 
 // Slider (reviews)
-var mySwiper = new Swiper('.reviews__swiper', {
+const mySwiperReviews = new Swiper('.reviews__swiper', {
   // Optional parameters
   loop: true,
   keyboard: {
@@ -63,3 +64,13 @@ var mySwiper = new Swiper('.reviews__swiper', {
     prevEl: '.reviews__swiper-button_prev',
   },
 })
+
+// Mobile vh modal fix
+let vh = window.innerHeight * 0.01;
+const modal = document.querySelector('.modal');
+modal.style.setProperty('--vh', `${vh}px`);
+
+window.addEventListener('resize', () => {
+  vh = window.innerHeight * 0.01;
+  modal.style.setProperty('--vh', `${vh}px`);
+});
