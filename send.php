@@ -5,21 +5,52 @@ require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
 
 // Переменные, которые отправляет пользователь
+
+$bookName = $_POST['bookName'];
+$bookPhone = $_POST['bookPhone'];
+$bookMessage = $_POST['bookMessage'];
+$bookEmail = $_POST['bookEmail'];
+
+$newsletterEmail = $_POST['newsletterEmail'];
+
 $name = $_POST['name'];
 $phone = $_POST['phone'];
 $message = $_POST['message'];
-$userEmail = $_POST['userEmail'];
-
 
 // Формирование самого письма
 $title = "Best Tour Plan";
+
+if (empty ($newsletterEmail) && empty ($name)) {
+    $body = "
+    <h2>New booking request</h2>
+    <b>Name:</b> $bookName<br>
+    <b>Phone number:</b> $bookPhone<br>
+    <b>Email:</b> $bookEmail<br><br>
+    <b>Message:</b><br>$bookMessage
+    ";
+} 
+else if (empty ($bookName) && empty ($name)){
+    $body = "
+    <h2>New subscriber to the newsletter</h2>
+    <b>Email:</b> $newsletterEmail
+    ";
+}
+else {
+    $body = "
+    <h2>New message</h2>
+    <b>Name:</b> $name<br>
+    <b>Phone number:</b> $phone<br><br>
+    <b>Message:</b><br>$message
+    ";
+};
+
 $body = "
 <h2>Новое письмо</h2>
 <b>Имя:</b> $name<br>
 <b>Телефон:</b> $phone<br><br>
 <b>Сообщение:</b><br>$message
 ";
-$bodyEmail = "
+$body = "
 <h2>Пользователь подписался на рассылку</h2>
 <b>Почта:</b> $userEmail
 ";
@@ -48,14 +79,9 @@ try {
 // Отправка сообщения
 $mail->isHTML(true);
 
-if (empty ($userEmail)) {
-    $mail->Subject = $title;
-    $mail->Body = $body;    
-} 
-else {
-    $mail->Subject = $title;
-    $mail->Body = $bodyEmail;    
-};
+$mail->Subject = $title;
+$mail->Body = $body;    
+
 
 // Проверяем отравленность сообщения
 if ($mail->send()) {$result = "success";} 

@@ -333,7 +333,8 @@
         </div>
 
         <form action="send.php" method="POST" class="newsletter__send">
-          <input type="email" name="userEmail" class="newsletter__input" placeholder="Your email address" required>
+          <input type="email" name="newsletterEmail" class="newsletter__input" placeholder="Your email address"
+            required>
           <button class="newsletter__button">
             Send
           </button>
@@ -534,7 +535,7 @@
             </div>
             <div class="input-wrapper footer__input-wrapper">
               <input name="phone" type="tel" class="input phone-input footer__input" placeholder="Phone Number*"
-                required>
+                required minlength="18">
             </div>
             <textarea name="message" rows="6" class="footer__textarea" placeholder="Message"></textarea>
             <button class="button footer__button">Send</button>
@@ -564,16 +565,17 @@
       <h3 class="modal__title">Booking</h3>
       <form action="#" method="POST" class="form modal__form">
         <div class="input-wrapper modal__input-wrapper">
-          <input name="name" type="text" class="input modal__input" placeholder="Your Full Name*" required
+          <input name="bookName" type="text" class="input modal__input" placeholder="Your Full Name*" required
             minlength="2">
         </div>
         <div class="input-wrapper modal__input-wrapper">
-          <input name="phone" type="tel" class="input phone-input modal__input" placeholder="Phone Number*" required>
+          <input name="bookPhone" type="tel" class="input phone-input modal__input" placeholder="Phone Number*" required
+            minlength="18">
         </div>
         <div class="input-wrapper modal__input-wrapper">
-          <input name="email" type="email" class="input modal__input" placeholder="Email*" required>
+          <input name="bookEmail" type="email" class="input modal__input" placeholder="Email*" required>
         </div>
-        <textarea name="message" rows="7" class="modal__textarea" placeholder="Message"></textarea>
+        <textarea name="bookMessage" rows="7" class="modal__textarea" placeholder="Message"></textarea>
         <div class="modal__wrapper">
           <button class="button modal__button">Send</button>
           <span class="modal__info">* Required Fields</span>

@@ -65,19 +65,19 @@ const mySwiperReviews = new Swiper('.reviews__swiper', {
   },
 })
 
-// Обработка форм
+// Forms validation
 $(document).ready(function () {
   $('.phone-input').mask('+7 (000) 000-00-00');
 
   $('.modal__form').validate({
     errorClass: "invalid",
     messages: {
-      name: {
+      bookName: {
         required: "Please specify your name",
         minlength: "Can't be shorter than 2 characters"
       },
-      phone: "Please enter your phone",
-      email: {
+      bookPhone: "Please enter your phone",
+      bookEmail: {
         required: "We need your email address to contact you",
         email: "Enter in the format of name@domain.com"
       }
@@ -98,7 +98,7 @@ $(document).ready(function () {
   $('.newsletter__send').validate({
     errorClass: "invalid",
     messages: {
-      userEmail: {
+      newsletterEmail: {
         required: "Please enter email address",
         email: "Enter a valid email"
       }
