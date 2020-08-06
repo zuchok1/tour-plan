@@ -69,8 +69,3 @@ const mySwiperReviews = new Swiper('.reviews__swiper', {
 let vh = window.innerHeight * 0.01;
 const modal = document.querySelector('.modal');
 modal.style.setProperty('--vh', `${vh}px`);
-
-window.addEventListener('resize', () => {
-  vh = window.innerHeight * 0.01;
-  modal.style.setProperty('--vh', `${vh}px`);
-});
