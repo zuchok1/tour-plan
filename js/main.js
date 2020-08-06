@@ -71,8 +71,10 @@ const mySwiperReviews = new Swiper('.reviews__swiper', {
   },
 })
 
-// Forms validation
 $(document).ready(function () {
+  AOS.init();
+
+  // Forms validation
   $('.phone-input').mask('+7 (000) 000-00-00');
 
   $('.modal__form').validate({
@@ -110,4 +112,5 @@ $(document).ready(function () {
       }
     }
   });
+
 });
