@@ -1567,7 +1567,7 @@ h1, h2, h3, p {
   display: none;
 }
 
-.modal__close {
+.modal-booking-close {
   position: absolute;
   top: 17px;
   right: 18px;

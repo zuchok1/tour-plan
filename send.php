@@ -44,17 +44,6 @@ else {
     ";
 };
 
-$body = "
-<h2>Новое письмо</h2>
-<b>Имя:</b> $name<br>
-<b>Телефон:</b> $phone<br><br>
-<b>Сообщение:</b><br>$message
-";
-$body = "
-<h2>Пользователь подписался на рассылку</h2>
-<b>Почта:</b> $userEmail
-";
-
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
 try {

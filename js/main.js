@@ -25,18 +25,24 @@ const mySwiper = new Swiper('.hotel-grid__swiper-container', {
 
 // Modal
 const modalBooking = document.querySelector('#modalBooking');
+var bookButton = document.getElementsByClassName('modal-booking-open');
 
-document.querySelector('#modalBookingOpen').addEventListener('click', () => {
+
+function modalOpen() {
   modalBooking.style.visibility = 'visible';
   modalBooking.style.opacity = '1';
-});
+};
 
 function modalClose() {
   modalBooking.style.visibility = 'hidden';
   modalBooking.style.opacity = '0';
 };
 
-document.querySelector('#modalBookingClose').addEventListener('click', (e) => {
+Array.from(bookButton).forEach(function (bookButton) {
+  bookButton.addEventListener('click', modalOpen);
+});
+
+document.querySelector('.modal-booking-close').addEventListener('click', (e) => {
   e.preventDefault();
   modalClose();
 });

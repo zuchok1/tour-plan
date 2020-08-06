@@ -146,7 +146,7 @@
             <img src="img/phone-call.svg" alt="Icon: phone">
             <a class="call-center__number" href="tel:12100">12100</a>
           </div>
-          <button class="options-card__button" id="modalBookingOpen">
+          <button class="options-card__button modal-booking-open">
             View Other Options
           </button>
         </div>
@@ -197,7 +197,7 @@
               <span class="package-card__price_old">$ 10,500</span>
               <span class="package-card__price">$ 8,500</span>
             </div>
-            <button class="package-card__button">Book now</button>
+            <button class="package-card__button modal-booking-open">Book now</button>
           </div>
         </div>
       </div>
@@ -226,7 +226,7 @@
               <span class="package-card__price_old">$ 8,500</span>
               <span class="package-card__price">$ 3,000</span>
             </div>
-            <button class="package-card__button">Book now</button>
+            <button class="package-card__button modal-booking-open">Book now</button>
           </div>
 
         </div>
@@ -256,7 +256,7 @@
               <span class="package-card__price_old">$ 10,500</span>
               <span class="package-card__price">$ 9,500</span>
             </div>
-            <button class="package-card__button">Book now</button>
+            <button class="package-card__button modal-booking-open">Book now</button>
           </div>
         </div>
       </div>
@@ -285,7 +285,7 @@
               <span class="package-card__price_old">$ 4,500</span>
               <span class="package-card__price">$ 2,500</span>
             </div>
-            <button class="package-card__button">Book now</button>
+            <button class="package-card__button modal-booking-open">Book now</button>
           </div>
         </div>
       </div>
@@ -315,7 +315,7 @@
               <span class="package-card__price_old">$ 6,500</span>
               <span class="package-card__price">$ 3,500</span>
             </div>
-            <button class="package-card__button">Book now</button>
+            <button class="package-card__button modal-booking-open">Book now</button>
           </div>
         </div>
       </div>
@@ -428,23 +428,23 @@
       <div class="card activities__card">
         <img src="img/card-image-1.jpg" alt="Bar" class="card__image">
         <h3 class="card__title">The curious corner of chamarel</h3>
-        <button class="card__button">Book now</button>
+        <button class="card__button modal-booking-open">Book now</button>
       </div>
       <div class="card activities__card">
         <img src="img/card-image-2.jpg" alt="Golf" class="card__image">
         <h3 class="card__title">Gymkhana club golf course</h3>
-        <button class="card__button">Book now</button>
+        <button class="card__button modal-booking-open">Book now</button>
       </div>
       <div class="card activities__card">
         <img src="img/card-image-3.jpg" alt="Waterfall" class="card__image">
         <h3 class="card__title">Tamarind falls hiking trip - full day
         </h3>
-        <button class="card__button">Book now</button>
+        <button class="card__button modal-booking-open">Book now</button>
       </div>
       <div class="card activities__card">
         <img src="img/card-image-4.jpg" alt="Sea" class="card__image">
         <h3 class="card__title">The blue marine discovery quest</h3>
-        <button class="card__button">Book now</button>
+        <button class="card__button modal-booking-open">Book now</button>
       </div>
     </div>
   </section>
@@ -559,11 +559,11 @@
   <div class="modal" id="modalBooking">
     <div class="modal__overlay"></div>
     <div class="modal__dialog">
-      <a href="#" class="modal__close" id="modalBookingClose">
+      <a href="#" class="modal-booking-close" id="modalBookingClose">
         <img src="img/close.svg" alt="Icon: close">
       </a>
       <h3 class="modal__title">Booking</h3>
-      <form action="#" method="POST" class="form modal__form">
+      <form action="send.php" method="POST" class="form modal__form">
         <div class="input-wrapper modal__input-wrapper">
           <input name="bookName" type="text" class="input modal__input" placeholder="Your Full Name*" required
             minlength="2">
