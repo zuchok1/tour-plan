@@ -68,6 +68,8 @@
     border: none
     padding: 18px 23px
   &__input
+    width: 100%  
+  &__input-wrapper
     margin-bottom: 15px
     flex-basis: 47.3%
   &__textarea
@@ -85,6 +87,18 @@
     border-radius: 4px
   &__info
     color: #e0e0e0    
+
+.input-wrapper
+  position: relative
+  label  
+    text-decoration: underline
+    position: absolute
+    bottom: 2px
+    left: 23px
+    z-index: 500
+
+.invalid
+  color: #ff6347
 
 .bottom
   display: flex

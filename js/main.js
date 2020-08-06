@@ -65,7 +65,43 @@ const mySwiperReviews = new Swiper('.reviews__swiper', {
   },
 })
 
-// Mobile vh modal fix
-let vh = window.innerHeight * 0.01;
-const modal = document.querySelector('.modal');
-modal.style.setProperty('--vh', `${vh}px`);
+// Обработка форм
+$(document).ready(function () {
+  $('.phone-input').mask('+7 (000) 000-00-00');
+
+  $('.modal__form').validate({
+    errorClass: "invalid",
+    messages: {
+      name: {
+        required: "Please specify your name",
+        minlength: "Can't be shorter than 2 characters"
+      },
+      phone: "Please enter your phone",
+      email: {
+        required: "We need your email address to contact you",
+        email: "Enter in the format of name@domain.com"
+      }
+    }
+  });
+
+  $('.footer__form').validate({
+    errorClass: "invalid",
+    messages: {
+      name: {
+        required: "Please specify your name",
+        minlength: "Can't be shorter than 2 characters"
+      },
+      phone: "Please enter your phone",
+    }
+  });
+
+  $('.newsletter__send').validate({
+    errorClass: "invalid",
+    messages: {
+      userEmail: {
+        required: "Please enter email address",
+        email: "Enter a valid email"
+      }
+    }
+  });
+});

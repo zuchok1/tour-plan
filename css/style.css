@@ -919,6 +919,18 @@ h1, h2, h3, p {
   background-color: #ec1f46;
 }
 
+.newsletter__send {
+  position: relative;
+}
+
+.newsletter__send label {
+  text-decoration: underline;
+  position: absolute;
+  bottom: 2px;
+  left: 33px;
+  z-index: 500;
+}
+
 .activities {
   padding: 60px 0 98px 0;
 }
@@ -1437,6 +1449,10 @@ h1, h2, h3, p {
 }
 
 .footer__input {
+  width: 100%;
+}
+
+.footer__input-wrapper {
   margin-bottom: 15px;
   -ms-flex-preferred-size: 47.3%;
       flex-basis: 47.3%;
@@ -1463,6 +1479,22 @@ h1, h2, h3, p {
 
 .footer__info {
   color: #e0e0e0;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper label {
+  text-decoration: underline;
+  position: absolute;
+  bottom: 2px;
+  left: 23px;
+  z-index: 500;
+}
+
+.invalid {
+  color: #ff6347;
 }
 
 .bottom {
@@ -1567,7 +1599,7 @@ h1, h2, h3, p {
   width: 100%;
 }
 
-.modal__input {
+.modal__input-wrapper {
   margin-bottom: 15px;
 }
 
@@ -2100,7 +2132,7 @@ h1, h2, h3, p {
   .footer__form-wrapper, .footer__contact {
     padding: 0;
   }
-  .footer__input {
+  .footer__input-wrapper {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
@@ -2113,7 +2145,7 @@ h1, h2, h3, p {
   }
   .modal__dialog {
     width: 92%;
-    padding: 33px 0;
+    padding: 33px 0 0 0;
   }
   .modal__form {
     width: 92%;
