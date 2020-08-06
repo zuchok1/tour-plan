@@ -929,6 +929,9 @@ h1, h2, h3, p {
   bottom: 2px;
   left: 33px;
   z-index: 500;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: normal;
 }
 
 .activities {
@@ -1450,6 +1453,7 @@ h1, h2, h3, p {
 
 .footer__input {
   width: 100%;
+  color: #bdbdbd;
 }
 
 .footer__input-wrapper {
