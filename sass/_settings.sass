@@ -13,6 +13,23 @@ body, html
 a 
   color: inherit
   text-decoration: none
+  position: relative
+
+  &:after 
+    display: block
+    position: absolute
+    left: 0
+    width: 0
+    height: 1px
+    background-color: #ffffff
+    content: ''
+    transition: width 0.3s ease-out
+
+  &:hover:after,
+  &:focus:after 
+    width: 100%
+  
+
 
 img
   max-width: 100%
