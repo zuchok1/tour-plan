@@ -24,7 +24,7 @@
 
         <form action="#" class="search header__search">
           <input type="text" class="search__input" placeholder="Search Location">
-          <button class="search__button">
+          <button class="search__button button_hover">
             <img src="img/search.svg" alt="Search">
           </button>
         </form>
@@ -77,13 +77,6 @@
     </ul>
   </div>
 
-  <div class="breadcrumb-container container">
-    <ul class="breadcrumb">
-      <li class="breadcrumb__item"><a href="#">Home</a></li>
-      <li class="breadcrumb__item"><a href="#">Flash Offers</a></li>
-      <li class="breadcrumb__item">Grand Hilton Hotel</li>
-    </ul>
-  </div>
   <section class="hotel-info container">
     <h2 class="section-title_small">Thanks!</h2>
   </section>
@@ -170,7 +163,7 @@
         </div>
 
         <div class="footer__form-wrapper">
-          <h3 class="footer__title footer__title_bottom">Send us a message</h3>
+          <h3 class="footer__title footer__title_bottom footer__title_form">Send us a message</h3>
           <form action="send.php" method="POST" class="form footer__form">
             <div class="input-wrapper footer__input-wrapper"><input name="name" type="text" class="input footer__input"
                 placeholder="Your Full Name*" required minlength="2">
@@ -180,7 +173,7 @@
                 required minlength="18">
             </div>
             <textarea name="message" rows="6" class="footer__textarea" placeholder="Message"></textarea>
-            <button class="button footer__button">Send</button>
+            <button class="button footer__button button_hover">Send</button>
             <span class="footer__info">* Required Fields</span>
           </form>
         </div>
@@ -197,6 +190,35 @@
       </div>
     </div>
   </footer>
+
+  <div class="modal" id="modalBooking">
+    <div class="modal__overlay"></div>
+    <div class="modal__dialog">
+      <a href="#" class="modal-booking-close" id="modalBookingClose">
+        <img src="img/close.svg" alt="Icon: close">
+      </a>
+      <h3 class="modal__title">Booking</h3>
+      <form action="send.php" method="POST" class="form modal__form">
+        <div class="input-wrapper modal__input-wrapper">
+          <input name="bookName" type="text" class="input modal__input" placeholder="Your Full Name*" required
+            minlength="2">
+        </div>
+        <div class="input-wrapper modal__input-wrapper">
+          <input name="bookPhone" type="tel" class="input phone-input modal__input" placeholder="Phone Number*" required
+            minlength="18">
+        </div>
+        <div class="input-wrapper modal__input-wrapper">
+          <input name="bookEmail" type="email" class="input modal__input" placeholder="Email*" required>
+        </div>
+        <textarea name="bookMessage" rows="7" class="modal__textarea" placeholder="Message"></textarea>
+        <div class="modal__wrapper">
+          <button class="button modal__button button_hover">Send</button>
+          <span class="modal__info">* Required Fields</span>
+        </div>
+      </form>
+    </div>
+  </div>
+
 
   <script src="js/jquery-3.5.1.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
