@@ -33,8 +33,16 @@
     &__legal
       padding-left: 50px
 
+  .package-card__info_big 
+    margin-bottom: 60px
+
+  .footer__title-br
+    display: inline
 
 @media (max-width: 992px)
+  a:after
+    display: none
+
   .container
     max-width: 700px
 
@@ -152,10 +160,13 @@
       grid-column: 1 / -1
       max-width: 539px
 
+    &__title-br
+      display: none
+
 @media (max-width: 767px)
   .container
     max-width: 576px
-    width: 92%
+    width: 87%
 
 
   .header
@@ -167,6 +178,7 @@
       z-index: 300
   
   .header-top
+    padding-top: 23px
     &__menu-button  
       display: flex
 
@@ -222,7 +234,14 @@
         & span
           margin-left: 0
           margin-top: 10px
+  
+  .breadcrumb-container
+    padding-top: 11px
 
+  .hotel-info
+    padding-top: 5px
+    &__text
+      margin-bottom: 42px
 
   .hotel-grid__swiper-container
     height: 100%
@@ -237,11 +256,13 @@
 
   .map
     width: 100%
+    height: 173px
 
   .hotel-grid
     max-height: 100% 
 
   .newsletter
+    padding: 78px 0 86px 0
     &__wrapper
       flex-direction: column
       align-items: flex-start
@@ -313,19 +334,21 @@
       padding-left: 0
     &__additional, &__social
       margin-left: 0          
-
+    &__title-br
+      display: inline
 @media (max-width: 576px) 
   .logo
     width: 99px
 
   .offer
     order: -1 
-    margin-bottom: 14px
+    margin-bottom: 10px
 
   .stars
     flex-basis: auto
     margin-left: auto
-    margin-bottom: 14px
+    margin-bottom: 10px
+    margin-right: 14px
 
   .hotel-info__name
     flex-basis: 100% 
@@ -349,7 +372,9 @@
 
   .footer
     padding-top: 69px
-    padding-bottom: 33px
+    padding-bottom: 20px
+    &__logo
+      margin-bottom: 10px
     &__wrapper
       grid-template-columns: 1fr
       grid-row-gap: 30px
@@ -357,9 +382,21 @@
       grid-column-start: 1 / -1 
       grid-row: 2 / 3
       flex-wrap: wrap
-    &__title_inline
-      flex-basis: 100%
-      margin-bottom: 16px
+    &__title
+      margin-bottom: 18px
+      &_inline
+        flex-basis: 100%
+        margin-bottom: 16px
+      &_bottom
+        margin-top: 10px
+        margin-bottom: 25px
+      &_form
+        margin-top: 24px
+        margin-bottom: 16px  
+    &__text
+      margin-bottom: 19px
+    &__item_contacts:not(:last-child)
+      margin-bottom: 23px
     &__legal
       grid-row: 3 / 4
     &__additional
@@ -375,10 +412,19 @@
       order: 1
     &__form-wrapper, &__contact
       padding: 0
+    &__form-wrapper
+      min-width: 281px  
     &__input-wrapper
-      flex-basis: 100%  
-
+      flex-basis: 100%
+    &__textarea
+      min-height: 123px
+      margin-bottom: 16px
+    &__info
+      margin-bottom: 15px  
+    &__title-br
+      display: none
   .bottom
+    margin-top: 30px
     &__links-wrapper
       flex-basis: 100%
     &__payment-methods
@@ -394,5 +440,7 @@
       max-width: 301px
       margin: auto
   
-
+  .reviews__text
+    text-align: left
+    min-width: 219px
 

@@ -76,6 +76,14 @@
       <li class="breadcrumb__item">Grand Hilton Hotel</li>
     </ul>
   </div>
+
+  <div class="breadcrumb-container container">
+    <ul class="breadcrumb">
+      <li class="breadcrumb__item"><a href="#">Home</a></li>
+      <li class="breadcrumb__item"><a href="#">Flash Offers</a></li>
+      <li class="breadcrumb__item">Grand Hilton Hotel</li>
+    </ul>
+  </div>
   <section class="hotel-info container">
     <h2 class="section-title_small">Thanks!</h2>
   </section>
@@ -91,7 +99,7 @@
         </div>
 
         <div class="footer__list footer__categories">
-          <h3 class="footer__title">ALL CATEGORIES</h3>
+          <h3 class="footer__title">ALL <br class="footer__title-br">CATEGORIES</h3>
           <ul class="footer__ul">
             <li class="footer__item"><a href="#" class="footer__link">All Deals</a></li>
             <li class="footer__item"><a href="#" class="footer__link">Hotels
@@ -128,7 +136,7 @@
         </div>
 
         <div class="footer__list footer__legal">
-          <h3 class="footer__title">LEGAL&nbspINFORMATION</h3>
+          <h3 class="footer__title">LEGAL <br class="footer__title-br">INFORMATION</h3>
           <ul class="footer__ul">
             <li class="footer__item"><a href="#" class="footer__link">Terms & Conditions
               </a></li>
@@ -150,7 +158,7 @@
             </li>
             <li class="footer__item footer__item_contacts">
               <div class="footer__icon"><img src="img/phone.svg" alt="Icon: phone"></div>
-              <span>Tel (business hours) : <a href=" tel:2691500">269 1500</a><br>
+              <span>Tel (business hours) : <a href="tel:2691500">269 1500</a><br>
                 Tel (hotline) Monday - Saturday: <a href="tel:52566138">52-56-61-38</a> (08:00 am – 20:00 pm)<br>
                 Tel (hotline) Sunday: <a href="tel:52566138">52-56-61-38</a> (08:00 am – 14:00 pm)</span>
             </li>
@@ -163,9 +171,14 @@
 
         <div class="footer__form-wrapper">
           <h3 class="footer__title footer__title_bottom">Send us a message</h3>
-          <form action="send.php" method="POST" class="footer__form">
-            <input name="name" type="text" class="input footer__input" placeholder="Your Full Name*">
-            <input name="phone" type="text" class="input footer__input" placeholder="Phone Number*">
+          <form action="send.php" method="POST" class="form footer__form">
+            <div class="input-wrapper footer__input-wrapper"><input name="name" type="text" class="input footer__input"
+                placeholder="Your Full Name*" required minlength="2">
+            </div>
+            <div class="input-wrapper footer__input-wrapper">
+              <input name="phone" type="tel" class="input phone-input footer__input" placeholder="Phone Number*"
+                required minlength="18">
+            </div>
             <textarea name="message" rows="6" class="footer__textarea" placeholder="Message"></textarea>
             <button class="button footer__button">Send</button>
             <span class="footer__info">* Required Fields</span>
@@ -183,7 +196,6 @@
           class="bottom__payment-methods">
       </div>
     </div>
-
   </footer>
 
   <script src="js/jquery-3.5.1.min.js"></script>
